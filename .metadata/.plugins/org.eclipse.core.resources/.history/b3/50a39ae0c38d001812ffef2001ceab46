@@ -1,0 +1,7 @@
+package com.avatar.maintenance.dto;
+
+@Table(name="persona")
+@Entity
+public class Person implements Serializable{
+
+}

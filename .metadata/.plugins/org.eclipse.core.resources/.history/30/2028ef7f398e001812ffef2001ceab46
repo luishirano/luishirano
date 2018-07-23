@@ -1,0 +1,19 @@
+package com.avatar.maintenance.service;
+
+import com.avatar.maintenance.dto.Person;
+
+
+public interface PersonService {
+
+	public int save(Person person);
+
+	public Iterable<Person> listAllPersons();
+
+	public void deletedPerson(Integer id);
+
+	public Person findPersonById(Integer id);
+
+	public int delete(Integer id);
+	
+
+}

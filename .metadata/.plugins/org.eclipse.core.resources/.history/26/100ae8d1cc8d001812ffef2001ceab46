@@ -1,0 +1,5 @@
+package com.avatar.maintenance.service;
+
+public interface PersonService {
+
+}

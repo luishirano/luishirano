@@ -1,0 +1,2 @@
+INDEX VERSION 1.4+C:\Avatar\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+111646951.index

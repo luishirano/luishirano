@@ -1,0 +1,5 @@
+package com.avatar.maintenance.controller;
+
+public class PersonController {
+
+}

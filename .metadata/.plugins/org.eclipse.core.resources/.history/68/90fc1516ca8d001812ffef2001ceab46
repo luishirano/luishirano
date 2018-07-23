@@ -1,0 +1,26 @@
+package com.avatar.maintenance.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.avatar.maintenance.repository.PersonRepository;
+
+@RestController
+public class PersonController {
+
+
+	@Autowired
+	PersonRepository p;
+
+	@RequestMapping(value="/prueba", method=RequestMethod.GET)
+    public void get(){
+        System.out.println("tres y cuatro");
+       List<Person> dos =  (List<Person>) p.findAll();
+       System.out.println(dos.size());
+        
+        
+    }
+
+}

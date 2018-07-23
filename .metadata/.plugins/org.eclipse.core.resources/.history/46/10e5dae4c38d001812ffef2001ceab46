@@ -1,0 +1,12 @@
+package com.avatar.maintenance.dto;
+
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Table(name="persona")
+@Entity
+public class Person implements Serializable{
+
+}

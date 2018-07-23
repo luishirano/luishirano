@@ -1,0 +1,16 @@
+package com.avatar.maintenance.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.avatar.maintenance.repository.PersonRepository;
+import com.avatar.maintenance.service.PersonService;
+
+@Service("personService")
+public class PersonServiceImpl implements PersonService{
+
+	@Autowired
+	PersonRepository pRepository;
+	
+	
+}

@@ -1,0 +1,19 @@
+package com.avatar.maintenance.controller;
+
+@RestController
+public class PersonController {
+
+
+	@Autowired
+	PersonRepository p;
+
+	@RequestMapping(value="/prueba", method=RequestMethod.GET)
+    public void get(){
+        System.out.println("tres y cuatro");
+       List<Person> dos =  (List<Person>) p.findAll();
+       System.out.println(dos.size());
+        
+        
+    }
+
+}

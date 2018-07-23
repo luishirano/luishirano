@@ -1,0 +1,43 @@
+package com.avatar.maintenance.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+import com.avatar.maintenance.dto.Person;
+import com.avatar.maintenance.repository.PersonRepository;
+import com.avatar.maintenance.service.PersonService;
+
+@Service("personService")
+public class PersonServiceImpl implements PersonService{
+
+	@Autowired
+	PersonRepository pRepository;
+	
+	@Override
+	public void save(Person person) {
+		RestTemplate restTemplate = new RestTemplate();
+		String gson = restTemplate.getForObject("https://swapi.co/api/planets/",String.class);           	         	
+		JSONObject json = new JSONObject(gson);          
+		pRepository.save(person);
+	}
+	
+/*
+ * RestTemplate restTemplate = new RestTemplate();
+////               	String gson = restTemplate.getForObject("https://maps.googleapis.com/maps/api/distancematrix/json?origins=" + latitudPick + "," +longitudPick +"&destinations=" + latitud+ ","+ longitud + KEY_GEOCODER,String.class);           	         	
+////                	JSONObject json = new JSONObject(gson);          	
+////               	System.out.println(json.getJSONArray("rows").getJSONObject(0).getJSONArray("elements"));		    
+////                	System.out.println(new Gson().toJson(json.toString()));	
+ */
+	
+//	public void delete(int id) {
+//		pRepository.deleteById(id);
+//	}
+//	public void updated(Person person) {
+//		pRepository.
+//	}
+//	@Override
+//	public Person getPerson(int id) {
+//		return pRepository.findById(id);
+//	}
+}

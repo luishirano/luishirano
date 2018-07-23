@@ -1,0 +1,11 @@
+package com.avatar.maintenance.service;
+
+import com.avatar.maintenance.dto.Person;
+
+public interface PersonService {
+
+	public void save(Person person);
+
+	public Person getPerson(int id);
+
+}

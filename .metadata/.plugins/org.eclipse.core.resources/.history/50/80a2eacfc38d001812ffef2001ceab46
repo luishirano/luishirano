@@ -1,0 +1,5 @@
+package com.avatar.maintenance.dto;
+
+public class Person implements Serializable{
+
+}

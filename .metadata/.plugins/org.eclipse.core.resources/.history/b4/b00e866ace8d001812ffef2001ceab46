@@ -1,0 +1,25 @@
+package com.avatar.maintenance.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.avatar.maintenance.dto.Person;
+import com.avatar.maintenance.repository.PersonRepository;
+import com.avatar.maintenance.service.PersonService;
+
+@Service("personService")
+public class PersonServiceImpl implements PersonService{
+
+	@Autowired
+	PersonRepository pRepository;
+	
+	@Override
+	public void save(Person person) {
+		pRepository.save(person);
+	}
+	
+	@Override
+	public Person getPerson(int id) {
+		Person person = pRepository.findById(id);
+	}
+}
